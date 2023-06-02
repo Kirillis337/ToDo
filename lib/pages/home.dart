@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                     itemCount: completedData.length,
                     itemBuilder: (BuildContext context, int index) {
                       return ToDo(
-                        itemName: completedData[index][0].toString(),
+                        itemName: completedData[index][1].toString(),
                         itemDescr: completedData[index][2],
                         itemCompleted: completedData[index][3],
                         onChanged: (value) =>
@@ -201,7 +201,7 @@ class _HomePageState extends State<HomePage> {
                     itemCount: notCompletedData.length,
                     itemBuilder: (BuildContext context, int index) {
                       return ToDo(
-                        itemName: notCompletedData[index][0].toString(),
+                        itemName: notCompletedData[index][1].toString(),
                         itemDescr: notCompletedData[index][2],
                         itemCompleted: notCompletedData[index][3],
                         onChanged: (value) =>
@@ -228,7 +228,7 @@ class _HomePageState extends State<HomePage> {
                     itemCount: db.toDoList.length,
                     itemBuilder: (BuildContext context, int index) {
                       return ToDo(
-                        itemName: db.toDoList[index][0].toString(),
+                        itemName: db.toDoList[index][1].toString(),
                         itemDescr: db.toDoList[index][2],
                         itemCompleted: db.toDoList[index][3],
                         onChanged: (value) =>
